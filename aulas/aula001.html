@@ -12,6 +12,114 @@
     <p>Welcome to the first lesson on JavaScript!</p>
 
     <script src="scripts/aula001.js"></script>
+
+
+    
     
 </body>
 </html>
+
+
+Exercício 1
+ 
+Definir uma variável com um número e calcular o factorial desse número, isto é, a multiplicação de todos os números inteiros entre 1 e o número.
+Por exemplo o factorial de 5 é o resultado da operação 1x2x3x4x5=120
+Não existe factorial de números negativos e 0! = 1. Testar estas hipóteses.
+
+
+Exercício 2
+ 
+Dada uma variável com um ano,let ano=2004;determinar se o ano é bissexto.
+
+
+
+Exercício 3
+ 
+Dada uma variável do tipo string, validar se obedece às seguintes condições, apresentando uma mensagem de erro:
+não pode ser vazia
+tem de ter, no mínimo, 3 caracteres
+o primeiro caracter tem de ser A ou B
+Utilizar os seguintes valores para testar:
+ 
+let valor1=""; // false
+let valor2="Primavera"; // false
+let valor3="Be"; // false;
+let valor4="Amesterdão"; // true
+let valor5="Benin"; // true
+
+
+
+Exercício 4
+ 
+Simular o método repeat, isto é, dadas duas variáveis,
+ 
+let repeticoes=3;
+let texto="Primavera";
+Criar uma variável (e mostrar o resultado no ecrã) que contenha o valor da variável "texto" repetido 3 vezes (é o valor da variável "repeticoes"):
+ 
+PrimaveraPrimaveraPrimavera
+Testar o algoritmo para valores diferentes das variáveis "repetições" e "texto".
+
+
+
+Exercício 5
+ 
+Simular o método trim() que remove os espaços que ocorrem no início e no fim de uma string.
+ 
+Exemplo:
+ 
+let frase=" Frase com espaços no início e no fim ";
+ 
+Deveremos ter como resultado "Frase com espaços no início e no fim".
+
+
+
+
+Exercício 6
+ 
+Validar se um email fornecido pelo utilizador tem o formato correcto, apresentando uma mensagem de erro, caso não seja válido.
+ 
+NÃO UTILIZAR EXPRESSÕES REGULARES!
+ 
+Condições:
+ 
+Tem de possuir uma @
+Antes da @ tem de existir 1 caracter
+Depois da @ tem de existir um caracter
+Depois da @, mas espaçado, pelo menos 1 caracter, tem de existir 1 ponto
+Depois do ponto, têm de existir, pelo menos 2 caracteres
+Caso não seja fornecido nenhum valor deve apresentar a mensagem "É necessário fornecer um email".
+Utilizar os seguintes valores para testar:
+ 
+let email1=""; // "É necessário fornecer um email"
+let email2="primavera"; // false
+let email3="a@primavera"; // false
+let email4="premoaldo@.primavera."; // false
+let email5="premoaldo@primavera"; // false
+let email6="premoaldo@primavera."; // false
+let email7="premoaldo@primavera.b"; // false
+let email8="premoaldo@primavera.pt"; // true
+
+
+
+
+Exercício 7
+ 
+Dada uma variável com o nome de um ficheiro,
+ 
+let ficheiro="teste.txt";
+extrair a extensão do ficheiro.
+O resultado deve ser ".txt" ou "txt". No caso de ser um ficheiro Word seria "doc" ou ".doc".
+Convém testar todas as hipóteses para a variável "ficheiro". Por exemplo, se não existe extensão, se a variável está vazia, se não contém uma string, etc.
+
+
+
+Exercício 9
+ 
+Identificar a maior palavra existente numa frase e o respectivo número de caracteres.Exemplo:
+ 
+let frase="Exemplo de uma frase com palavras";
+Deve apresentar como resultado
+ 
+"palavras" - 8 letras
+Podem utilizar métodos de strings.
