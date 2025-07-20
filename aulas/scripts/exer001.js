@@ -277,13 +277,65 @@ extrair a extensão do ficheiro.
 O resultado deve ser ".txt" ou "txt". No caso de ser um ficheiro Word seria "doc" ou ".doc".
 Convém testar todas as hipóteses para a variável "ficheiro". Por exemplo, se não existe extensão, se a variável está vazia, se não contém uma string, etc.
 
+
+
+
+
+function extrairExtensao(ficheiro) {
+    // Verificar se o valor é string e não está vazio
+    if (typeof ficheiro !== 'string' || ficheiro.trim() === '') {
+        return null; // ou "" dependendo do que preferir
+    }
+
+    // Encontrar a última ocorrência do ponto
+    const ultimoPonto = ficheiro.lastIndexOf('.');
+
+    // Casos de retorno
+    if (ultimoPonto === -1) {
+        return null; // Não tem extensão
+    }
+    if (ultimoPonto === ficheiro.length - 1) {
+        return null; // O ponto está no final sem extensão
+    }
+
+    // Retornar a extensão COM ponto
+    return ficheiro.substring(ultimoPonto); // Para retornar SEM ponto: substring(ultimoPonto + 1)
+}
+
+// Testes
+const testes = [
+    "teste.txt",    // .txt
+    "documento.doc", // .doc
+    "sem_extensao",  // null
+    ".htaccess",     // .htaccess
+    "ponto.final.",  // null
+    "",              // null
+    null,            // null
+    123,             // null
+    "vários.pontos.html" // .html
+];
+
+testes.forEach(ficheiro => {
+    console.log(`${JSON.stringify(ficheiro)} → ${extrairExtensao(ficheiro)}`);
+});
+
 */
 
-let ficheiro = "texte.txt";
+//-----------------------------------------------------------------------------
 
-function extrairExtensao(ficheiro){
+/*
 
-    if(typeof ficheiro !== 'string' || ficheiro.trim() === ''){
-        return null;
-    }
-}
+Exercício 9
+ 
+Identificar a maior palavra existente numa frase e o respectivo número de caracteres.Exemplo:
+ 
+let frase="Exemplo de uma frase com palavras";
+Deve apresentar como resultado
+ 
+"palavras" - 8 letras
+Podem utilizar métodos de strings.
+
+*/
+
+
+
